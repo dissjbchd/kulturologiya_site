@@ -1,4 +1,4 @@
-/* === Современный минималистичный стиль для сайта по культурологии === */
+/* === Современный адаптивный стиль сайта по культурологии === */
 body {
   font-family: "Inter", "Segoe UI", sans-serif;
   margin: 0;
@@ -6,7 +6,6 @@ body {
   background-color: #f3f2ef;
   color: #2a2a2a;
   line-height: 1.7;
-  transition: background 0.3s ease;
 }
 
 /* === Шапка === */
@@ -14,13 +13,13 @@ header {
   background: linear-gradient(135deg, #2c2c2c, #444);
   color: #f0f0f0;
   text-align: center;
-  padding: 60px 20px;
+  padding: 50px 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
@@ -64,10 +63,10 @@ nav a:hover {
   color: #7c6f55;
 }
 
-/* === Основной контент === */
+/* === Контент === */
 main {
   max-width: 1100px;
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 30px 25px;
   background: #fffdfa;
   border-radius: 16px;
@@ -89,7 +88,7 @@ h2 {
 }
 
 p {
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   color: #4a4a4a;
   margin-bottom: 22px;
   text-align: justify;
@@ -99,14 +98,15 @@ p {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
   margin: 25px auto;
-  border-radius: 14px;
+  border-radius: 12px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 img:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -119,17 +119,6 @@ footer {
   margin-top: 70px;
   font-size: 0.95rem;
   box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.25);
-}
-
-footer a {
-  color: #bda67a;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #fff;
 }
 
 /* === Кнопки === */
@@ -151,18 +140,62 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* === Адаптивность === */
-@media (max-width: 768px) {
+/* === 📱 Адаптивная верстка === */
+@media (max-width: 900px) {
   header h1 {
-    font-size: 2rem;
-  }
-
-  main {
-    margin: 30px 10px;
-    padding: 20px;
+    font-size: 2.2rem;
   }
 
   nav a {
-    padding: 12px 16px;
+    padding: 12px 18px;
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #dcd8d2;
+  }
+
+  main {
+    margin: 15px;
+    padding: 18px;
+  }
+
+  header {
+    padding: 40px 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 20px 10px;
   }
 }
