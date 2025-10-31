@@ -1,121 +1,168 @@
-/* === Основной стиль сайта по культурологии === */
+/* === Современный минималистичный стиль для сайта по культурологии === */
 body {
   font-family: "Inter", "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f5f7;
-  color: #2b2b2b;
-  line-height: 1.6;
+  background-color: #f3f2ef;
+  color: #2a2a2a;
+  line-height: 1.7;
+  transition: background 0.3s ease;
 }
 
 /* === Шапка === */
 header {
-  background-color: #1e1e1e;
-  color: #f5f5f5;
+  background: linear-gradient(135deg, #2c2c2c, #444);
+  color: #f0f0f0;
   text-align: center;
-  padding: 50px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 60px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 600;
   letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* === Навигация === */
 nav {
-  background-color: #2a2a2a;
+  background-color: #e9e6e1;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #d1cfc9;
 }
 
 nav a {
-  color: #e0e0e0;
+  color: #3a3a3a;
   text-decoration: none;
   padding: 15px 25px;
   font-weight: 500;
   transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  width: 0;
+  height: 2px;
+  background: #7c6f55;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 60%;
 }
 
 nav a:hover {
-  background-color: #3a3a3a;
-  border-bottom: 2px solid #bfbfbf;
+  color: #7c6f55;
 }
 
 /* === Основной контент === */
 main {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background: #fffdfa;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h2 {
-  color: #1f1f1f;
-  border-left: 4px solid #888;
-  padding-left: 10px;
-  margin-top: 30px;
+  color: #2f2f2f;
+  border-left: 4px solid #bda67a;
+  padding-left: 12px;
+  margin-top: 40px;
+  font-weight: 600;
 }
 
 p {
-  font-size: 1.05rem;
-  color: #444;
-  margin-bottom: 20px;
+  font-size: 1.08rem;
+  color: #4a4a4a;
+  margin-bottom: 22px;
+  text-align: justify;
 }
 
 /* === Изображения === */
 img {
   display: block;
   max-width: 100%;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  margin: 25px auto;
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 img:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* === Подвал === */
 footer {
-  background-color: #1e1e1e;
-  color: #bbb;
+  background-color: #2c2c2c;
+  color: #d9d9d9;
   text-align: center;
-  padding: 20px;
-  margin-top: 50px;
+  padding: 25px;
+  margin-top: 70px;
   font-size: 0.95rem;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.25);
 }
 
 footer a {
-  color: #bbb;
+  color: #bda67a;
   text-decoration: none;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: white;
+  color: #fff;
 }
 
-/* === Кнопки (если нужно добавить) === */
+/* === Кнопки === */
 button {
-  background-color: #2a2a2a;
+  background-color: #7c6f55;
   color: white;
   border: none;
-  border-radius: 6px;
-  padding: 10px 18px;
+  border-radius: 8px;
+  padding: 12px 20px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 button:hover {
-  background-color: #3b3b3b;
+  background-color: #665c47;
+  transform: translateY(-2px);
+}
+
+/* === Адаптивность === */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    margin: 30px 10px;
+    padding: 20px;
+  }
+
+  nav a {
+    padding: 12px 16px;
+  }
 }
